@@ -1,0 +1,175 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Playpen Sans", cursive;
+  color: white;
+  background: black;
+  overflow-x: hidden;
+  padding-top: 80px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.space-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Navbar */
+.navbar-container {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(21, 13, 39, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.ul-navbar-container {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.li-navbar-container,
+.li-navbar-brand {
+  margin: 0 15px;
+  font-weight: 500;
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
+
+.li-navbar-brand {
+  font-family: "Modak", system-ui;
+  font-size: 35px;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.li-navbar-brand::before {
+  content: "SPARK";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: -1;
+  background: linear-gradient(to bottom right, #840000, #ae0808, #d90e0e, #ff1111);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Modak", system-ui;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.li-navbar-container a {
+  font-family: "DynaPuff", system-ui;
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 1px 0 #e22b2b;
+  transition: color 0.3s ease;
+}
+
+.li-navbar-container a:hover {
+  color: #ffcc00;
+}
+
+/* Kalkulator */
+h1 {
+  font-family: 'Rubik Doodle Shadow', cursive;
+  color: #ffffff;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+label,
+select,
+input {
+  font-family: 'Delius', cursive;
+  font-size: 1.2em;
+  margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#result {
+  font-family: 'Delius', cursive;
+  font-size: 1.5em;
+  color: purple;
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  font-family: 'Delius', cursive;
+  background-color: #a64ca6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 8px;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #800080;
+}
+
+.container {
+  background-color: #2A2241;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 15px rgba(128, 0, 128, 0.3);
+  text-align: center;
+}
+
+#calculator-box {
+  position: absolute;
+  top: 65%; /* ubah ini dari 50% */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* tidak center, biar dari atas */
+  padding-top: 500px; /* tambah ruang dari atas */
+  min-height: 100vh;
+}
+
+p {
+  color:#ffffff;
+}
+
+label {
+  color:#ffffff;
+}

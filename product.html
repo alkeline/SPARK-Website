@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>SPARK : PRODUCT</title>
+  <link rel="stylesheet" href="product.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&family=Modak&family=DynaPuff:wght@400..700&family=Delius&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Background -->
+<div class="space-background">
+  <img src="bgproductfikscss.svg" alt="Background" class="bg-image">
+</div>
+
+<!-- Navbar -->
+<div class="navbar-container">
+  <div class="navbar-left">
+    <ul class="ul-navbar-container">
+      <li class="li-navbar-brand">SPARK</li>
+    </ul>
+  </div>
+  <div class="navbar-right">
+    <ul class="ul-navbar-container">
+      <li class="li-navbar-container"><a href="index.html">Home</a></li>
+      <li class="li-navbar-container"><a href="index.html#introduce-container">About Us</a></li>
+      <li class="li-navbar-container"><a href="process.html">Process</a></li>
+      <li class="li-navbar-container"><a href="product.html">Design Product</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Kalkulator Berat -->
+<div class="container">
+  <h1>Kalkulator Berat di Planet 🪐</h1>
+  <p>Masukkan berat badan kamu di Bumi (kg):</p>
+  <input type="number" id="earthWeight" placeholder="Contoh: 60">
+  <br>
+  <label for="planetSelect">Pilih Planet:</label>
+  <select id="planetSelect">
+    <option value="0.38">Merkurius</option>
+    <option value="0.91">Venus</option>
+    <option value="0.38">Mars</option>
+    <option value="2.34">Jupiter</option>
+    <option value="0.93">Saturnus</option>
+    <option value="0.92">Uranus</option>
+    <option value="1.12">Neptunus</option>
+  </select>
+  <br><br>
+  <button onclick="calculate()">Hitung Berat</button>
+  <div id="result"></div>
+</div>
+
+<script>
+  function calculate() {
+    const weight = parseFloat(document.getElementById("earthWeight").value);
+    const gravity = parseFloat(document.getElementById("planetSelect").value);
+    const resultDiv = document.getElementById("result");
+    if (!isNaN(weight)) {
+      const result = weight * gravity;
+      resultDiv.innerHTML = `Berat kamu di planet ini adalah <strong>${result.toFixed(2)} kg</strong>`;
+    } else {
+      resultDiv.innerHTML = "Masukkan berat badan yang valid!";
+    }
+  }
+</script>
+
+</body>
+</html>
